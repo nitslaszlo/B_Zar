@@ -1,5 +1,5 @@
-﻿A 2016.05.10-i közismereti informatika érettségi programozási (Zár)
-feladatának megoldása Visual Studio Code fejlesztői környezettel, TypeScript nyelven Node.js-el a szerver oldalon,
+﻿A 2016.05.10-i közismereti informatika érettségi programozási (Zár) feladatának megoldása
+Visual Studio Code fejlesztői környezettel, TypeScript nyelven Node.js-el a szerver oldalon,
 mivel fájlokat kell írni-olvasni.
 A csoport tagja:
 - XY1
