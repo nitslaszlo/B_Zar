@@ -38,18 +38,18 @@ namespace Erettsegi32_Zár
 
         public bool Eltérés(string proba) //6. feladat (OOP elvek végett módosított fejjel)
         {
-            bool eggyezik = K.Length == proba.Length;
-            if (eggyezik)
+            bool egyezik = K.Length == proba.Length;
+            if (egyezik)
             {
                 int elteres = (int)K[0] - (int)proba[0];
                 for (int i = 1; i < K.Length; i++)
                 {
                     int aktElteres = (int)K[i] - (int)proba[i];
                     int diff = elteres - aktElteres;
-                    if (diff % 10 != 0) eggyezik = false;
+                    if (diff % 10 != 0) egyezik = false;
                 }
             }
-            return eggyezik;
+            return egyezik;
         }
     }
 
