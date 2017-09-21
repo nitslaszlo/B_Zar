@@ -4,7 +4,7 @@ mivel fájlokat kell írni-olvasni.
 A csoport tagja:
 - aPisC : Cseresnyés Bendegúz
 - XY2
-- XY3
+- Ahega0 : Rőczey Barnabás
 
 VS Code + TypeScript + Node.js + Git
 =====================================
