@@ -22,7 +22,7 @@ export class Content {
         res.write((ism.Count() === 0 ? ("4. feladat: nem volt ismétlődő számjegy") :
             ("4. feladat: Az első ismétlődést tartalmazó próbálkozás sorszáma: " + ism.First().Ssz)));
         res.write( "5. feladat: Egy " + zárKód.length.toString() +" hosszú kódszám: " + Kód.Generál(zárKód.length));
-        fs.writeFileSync("siker.txt", new TsLinqHandler(k).Select(x=> x.k + x.Minősít(zárKód) ).ToArray().join("\n") );
+        //fs.writeFileSync("siker.txt", new TsLinqHandler(k).Select(x=> x.k + x.Minősít(zárKód) ).ToArray().join("\n") );
         res.end();
     }
 }
