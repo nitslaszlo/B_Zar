@@ -1,25 +1,32 @@
-export class TsLinq {
-   public static Where<T>(a: T[], exp: Function): T[] {
-      const b: T[] = [];
-      a.forEach((e, i) => { if (exp(e, i)) b.push(e); });
-      return exp(a);
+export class TsLinqHandler {
+   private arr: any[];
+   public constructor(arr: any[]) {
+      this.arr = arr;
    }
-   public static Count<T>(a: T[], exp: Function): number {
-      if (exp === undefined) a.length;
+   public ToArray(): any[] {
+      return this.arr;
+   }
+   public Where( exp: Function): TsLinqHandler {
+      const b: any[] = [];
+      this.arr.forEach((e, i) => { if (exp(e, i)) b.push(e); });
+      return new TsLinqHandler(b);
+   }
+   public Count( exp: Function): number {
+      if (exp === undefined) this.arr.length;
       let b: number = 0;
-      a.forEach((e, i) => { if (exp(e, i)) b++; });
+      this.arr.forEach((e, i) => { if (exp(e, i)) b++; });
       return b;
    }
-   public static Sum<T>(a: T[], exp: Function): number {
+   public Sum( exp: Function): number {
       if (exp === undefined) exp = (e) => e;
       let b: number = 0;
-      a.forEach((e, i) => { b += exp(e, i); });
+      this.arr.forEach((e, i) => { b += exp(e, i); });
       return b;
    }
-   public static Select<TSource>(a: TSource[], exp: Function): any[] {
-      if (exp === undefined) return a;
+   public Select( exp: Function): TsLinqHandler {
+      if (exp === undefined) return this;
       const b: any[] = [];
-      a.forEach((e, i) => { b.push(exp(e, i)); });
-      return b;
+      this.arr.forEach((e, i) => { b.push(exp(e, i)); });
+      return new TsLinqHandler(b);
    }
 }

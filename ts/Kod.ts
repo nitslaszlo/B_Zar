@@ -1,3 +1,4 @@
+import { TsLinq } from "./TsLinq";
 
    export class Kód {
       public K: string;
