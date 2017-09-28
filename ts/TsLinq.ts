@@ -11,7 +11,7 @@ export class TsLinqHandler {
       this.arr.forEach((e, i) => { if (exp(e, i)) b.push(e); });
       return new TsLinqHandler(b);
    }
-   public Count( exp: Function): number {
+   public Count( exp: Function = undefined): number {
       if (exp === undefined) this.arr.length;
       let b: number = 0;
       this.arr.forEach((e, i) => { if (exp(e, i)) b++; });
@@ -28,5 +28,9 @@ export class TsLinqHandler {
       const b: any[] = [];
       this.arr.forEach((e, i) => { b.push(exp(e, i)); });
       return new TsLinqHandler(b);
+   }
+   public First(): any {
+      if (this.arr.length == 0) return undefined;
+      return this.arr[0];
    }
 }

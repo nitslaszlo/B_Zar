@@ -1,5 +1,3 @@
-import { TsLinq } from "./TsLinq";
-
    export class Kód {
       public K: string;
       public Ssz: string;
@@ -42,5 +40,8 @@ import { TsLinq } from "./TsLinq";
             }
          }
          return egyezik;
+      }
+      public static ResetSorszam(): void{
+         this.Db = 0;
       }
    }

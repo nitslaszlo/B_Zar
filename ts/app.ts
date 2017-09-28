@@ -1,6 +1,6 @@
 ﻿import * as http from "http";
 import { Content } from "./Content";
-import { TsLinq } from "./TsLinq";
+import { TsLinqHandler } from "./TsLinq";
 
 class Program {
     constructor() {
