@@ -3,7 +3,7 @@ Visual Studio Code fejlesztői környezettel, TypeScript nyelven Node.js-el a sz
 mivel fájlokat kell írni-olvasni.
 A csoport tagja:
 - aPisC : Cseresnyés Bendegúz
-- XY2
+- Whide1 : Villám Dávid
 - Ahega0 : Rőczey Barnabás
 
 VS Code + TypeScript + Node.js + Git
