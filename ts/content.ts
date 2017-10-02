@@ -16,8 +16,9 @@ export class Content {
             .forEach(x => k.push(new Kód(x.trim())));
         res.write("<br />2. feladat: Kérem a zár kódszámát: ");
         const zárKód: string = "239451";
-        res.write("<br />3. feladat: A nyitó kódszámok sorai: "
-            + new TsLinqHandler(k).Where(x => x.K === zárKód).Select(x => x.Ssz).ToArray().join(" "));
+        res.write("<br />3. feladat: A nyitó kódszámok sorai: " + new TsLinqHandler(k).Where(x => x.K === zárKód)
+            .Select(x => x.Ssz).ToArray().join(" "));
+            + new TsLinqHandler(k)
         const ism: any = new TsLinqHandler(k).Where(x => x.IsmétlésVan);
         res.write((ism.Count() === 0 ? ("4. feladat: nem volt ismétlődő számjegy") :
             ("<br />4. feladat: Az első ismétlődést tartalmazó próbálkozás sorszáma: " + ism.First().Ssz)));

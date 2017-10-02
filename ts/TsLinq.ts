@@ -33,4 +33,7 @@ export class TsLinqHandler {
       if (this.arr.length == 0) return undefined;
       return this.arr[0];
    }
+   public Join(separator: string): string {
+      return this.arr.join(separator);
+   }
 }
