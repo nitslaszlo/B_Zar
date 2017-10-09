@@ -17,9 +17,9 @@ export class Content {
 
         res.write("<br />2. feladat: Kérem a zár kódszámát: ");
         //const zárKód: string = "239451";
-        const zárKód: string = url.parse(req.url, true).searchParams.get("zarkod"); // <string> or null
-        if (zárKód === null) {
-            res.write("<form method="GET"><input type="text" name="zarkod"/></form>");
+        const zárKód: string | undefined = url.parse(req.url, true).query["zarkod"];
+        if (zárKód === undefined) {
+            res.write("<form method='GET'><input type='text' name='zarkod'/></form>");
             res.end();
             return;
         }
