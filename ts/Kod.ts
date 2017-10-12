@@ -41,7 +41,7 @@
          }
          return egyezik;
       }
-      public static ResetSorszam(): void{
+      public static ResetSorszam(): void {
          this.Db = 0;
       }
    }
